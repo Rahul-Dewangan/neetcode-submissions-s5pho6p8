@@ -1,0 +1,11 @@
+class Solution {
+public:
+    int hammingWeight(uint32_t n) {
+        int num = n, ans = 0;
+        for(int i=0; i<32; i++){
+            ans += (n & 1) ?1:0;
+            n=n>>1;
+        }
+        return ans;
+    }
+};
